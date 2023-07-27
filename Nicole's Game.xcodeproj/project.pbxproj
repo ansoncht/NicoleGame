@@ -14,6 +14,11 @@
 		3E228F6D2A61EFF600184265 /* Nicole_s_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E228F6C2A61EFF600184265 /* Nicole_s_GameTests.swift */; };
 		3E228F772A61EFF600184265 /* Nicole_s_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E228F762A61EFF600184265 /* Nicole_s_GameUITests.swift */; };
 		3E228F792A61EFF600184265 /* Nicole_s_GameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E228F782A61EFF600184265 /* Nicole_s_GameUITestsLaunchTests.swift */; };
+		3E3950832A8DF5E900283FE5 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3950822A8DF5E900283FE5 /* GameView.swift */; };
+		3E4F9BB52A6E0B12004EB959 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4F9BB42A6E0B12004EB959 /* PrimaryButton.swift */; };
+		3E4F9BB82A6E4FA2004EB959 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4F9BB72A6E4FA2004EB959 /* Extensions.swift */; };
+		3E4F9BBA2A6E521C004EB959 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4F9BB92A6E521C004EB959 /* QuestionView.swift */; };
+		3E4F9BBC2A6E549E004EB959 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4F9BBB2A6E549E004EB959 /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		3E228F722A61EFF600184265 /* Nicole's GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nicole's GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E228F762A61EFF600184265 /* Nicole_s_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nicole_s_GameUITests.swift; sourceTree = "<group>"; };
 		3E228F782A61EFF600184265 /* Nicole_s_GameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nicole_s_GameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3E3950822A8DF5E900283FE5 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		3E4F9BB42A6E0B12004EB959 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		3E4F9BB72A6E4FA2004EB959 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3E4F9BB92A6E521C004EB959 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		3E4F9BBB2A6E549E004EB959 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				3E228F5B2A61EFF500184265 /* Nicole_s_GameApp.swift */,
-				3E228F5D2A61EFF500184265 /* ContentView.swift */,
+				3E4F9BB62A6E0BAB004EB959 /* Views */,
+				3E4F9BB32A6E0AE0004EB959 /* Components */,
 				3E228F5F2A61EFF600184265 /* Assets.xcassets */,
 				3E228F612A61EFF600184265 /* Preview Content */,
+				3E4F9BB72A6E4FA2004EB959 /* Extensions.swift */,
 			);
 			path = "Nicole's Game";
 			sourceTree = "<group>";
@@ -125,6 +137,25 @@
 				3E228F782A61EFF600184265 /* Nicole_s_GameUITestsLaunchTests.swift */,
 			);
 			path = "Nicole's GameUITests";
+			sourceTree = "<group>";
+		};
+		3E4F9BB32A6E0AE0004EB959 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3E4F9BB42A6E0B12004EB959 /* PrimaryButton.swift */,
+				3E4F9BBB2A6E549E004EB959 /* ProgressBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3E4F9BB62A6E0BAB004EB959 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E228F5D2A61EFF500184265 /* ContentView.swift */,
+				3E4F9BB92A6E521C004EB959 /* QuestionView.swift */,
+				3E3950822A8DF5E900283FE5 /* GameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4F9BBA2A6E521C004EB959 /* QuestionView.swift in Sources */,
+				3E4F9BB52A6E0B12004EB959 /* PrimaryButton.swift in Sources */,
 				3E228F5E2A61EFF500184265 /* ContentView.swift in Sources */,
 				3E228F5C2A61EFF500184265 /* Nicole_s_GameApp.swift in Sources */,
+				3E4F9BBC2A6E549E004EB959 /* ProgressBar.swift in Sources */,
+				3E4F9BB82A6E4FA2004EB959 /* Extensions.swift in Sources */,
+				3E3950832A8DF5E900283FE5 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
