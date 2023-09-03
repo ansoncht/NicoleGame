@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var gameManager = GameManager()
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 40) {
@@ -21,6 +23,7 @@ struct ContentView: View {
                 }
                 NavigationLink {
                     GameView()
+                        .environmentObject(gameManager)
                 } label: {
                     PrimaryButton(text: "快啲㩒啦")
                 }
