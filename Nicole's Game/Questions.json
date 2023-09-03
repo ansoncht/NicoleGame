@@ -3,18 +3,18 @@
   "results": [
     {
       "category": "Cantonese",
-      "question": "_____ hóng dēng 係咩啊？",
+      "question": "你唔好 _____ hóng dēng 係咩啊？",
       "correct_answer": "衝"
     },
     {
       "category": "Cantonese",
-      "question": "_____ hóng dēng 係咩啊？",
-      "correct_answer": "衝"
+      "question": "你份人好冇 _____ lǐ 係咩啊？",
+      "correct_answer": "條"
     },
     {
       "category": "Cantonese",
-      "question": "_____ hóng dēng 係咩啊？",
-      "correct_answer": "衝"
+      "question": "你份人好難 _____ mō 係咩啊？",
+      "correct_answer": "觸"
     },
     {
       "category": "Cantonese",
