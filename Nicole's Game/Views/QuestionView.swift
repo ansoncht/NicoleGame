@@ -21,7 +21,7 @@ struct QuestionView: View {
                     .fontWeight(.heavy)
                 
             }
-            ProgressBar(progress: 40)
+            ProgressBar(progress: gameManager.progress)
             
             VStack(alignment: .center, spacing: 20) {
                 Text(gameManager.currentQuestion)
@@ -29,25 +29,17 @@ struct QuestionView: View {
                     .bold()
                     .foregroundColor(.gray)
                     .padding(10)
-                ZStack {
-                    RoundedRectangle(cornerRadius: 12)
-                        .foregroundColor(.white)
-                        .frame(height: 50)
-                        .shadow(color: Color.gray.opacity(0.4), radius: 4, x: 0, y: 2)
-
-                    TextField("你嘅答案係？", text: $answer)
-                        .multilineTextAlignment(.center)
-                }
-                .padding(.horizontal, 80)
-                .padding(.top, 10)
+                AnswerBox(answer: $answer)
             }
             
             Button {
+                gameManager.checkAnswer(answer: answer)
+                answer = ""
                 gameManager.goToNextQuestion()
             } label: {
-                PrimaryButton(text: "Next", background: gameManager.answerTyped ? Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                PrimaryButton(text: "Next", background: answer.isEmpty ? Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327) : Color("AccentColor"))
             }
-            .disabled(!gameManager.answerTyped)
+            .disabled(answer.isEmpty)
             
             Spacer()
         }

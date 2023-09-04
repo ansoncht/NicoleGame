@@ -14,7 +14,7 @@ class GameManager: ObservableObject {
     @Published private (set) var index = 0
     @Published private (set) var reachedEnd = false
     @Published private (set) var currentQuestion = ""
-    @Published private (set) var answerTyped = false
+    @Published private (set) var currentAnswer = ""
     @Published private (set) var progress: CGFloat = 0.00
     @Published private (set) var score = 0
 
@@ -40,6 +40,11 @@ class GameManager: ObservableObject {
             print(result)
 
             DispatchQueue.main.async {
+                self.index = 0
+                self.score = 0
+                self.progress = 0.00
+                self.reachedEnd = false
+                
                 self.question = result.results
                 self.length = self.question.count
                 self.setQuestion()
@@ -59,18 +64,20 @@ class GameManager: ObservableObject {
     }
     
     func setQuestion() {
-        answerTyped = false
-        progress = CGFloat(Double(index + 1) / Double(length * 350))
+        progress = CGFloat(Double((index + 1)) / Double(length) * 350)
+        print(progress)
         
         if index < length {
             let currentWorkingQuestion = question[index]
             currentQuestion = currentWorkingQuestion.question
+            currentAnswer = currentWorkingQuestion.correctAnswer
         }
     }
     
     func checkAnswer(answer: String) {
-        answerTyped = true
-        if answer == "" {
+        print(answer)
+        print(currentAnswer)
+        if answer == currentAnswer {
             score += 1
         }
     }

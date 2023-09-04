@@ -16,7 +16,7 @@ struct ContentView: View {
                 VStack(spacing:20) {
                     Text("正字刑警")
                         .lilacTitle()
-                    Text("Hi 周小姐 睇吓你幾時拾得寫翻啱啲字 :)")
+                    Text("Hi 周小姐 睇吓你幾時捨得寫翻啱啲字🤭")
                         .foregroundColor(Color("AccentColor"))
                     Text("啱八成就有獎啦！")
                         .foregroundColor(Color("AccentColor"))
