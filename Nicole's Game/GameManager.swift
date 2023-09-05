@@ -37,7 +37,6 @@ class GameManager: ObservableObject {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let result = try decoder.decode(Question.self, from: data)
-            print(result)
 
             DispatchQueue.main.async {
                 self.index = 0
@@ -65,7 +64,6 @@ class GameManager: ObservableObject {
     
     func setQuestion() {
         progress = CGFloat(Double((index + 1)) / Double(length) * 350)
-        print(progress)
         
         if index < length {
             let currentWorkingQuestion = question[index]
@@ -75,10 +73,12 @@ class GameManager: ObservableObject {
     }
     
     func checkAnswer(answer: String) {
-        print(answer)
-        print(currentAnswer)
         if answer == currentAnswer {
+            print("Question \(index+1): Correct")
             score += 1
+        } else {
+            print("Question \(index+1): Wrong")
         }
+        print("\t你嘅答案:\(answer) 正確答案:\(currentAnswer)")
     }
 }
